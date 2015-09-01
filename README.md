@@ -102,6 +102,14 @@ Install a driver:
 $ gem install selenium-webdriver
 ```
 
-@todo:
-framework setup
+### @todo:
 
+More!  
+- windows setup
+- API tutorial
+- gherkin tutorial
+- skeleton framework build w/ non dry cucumber
+- basic end to end tests (manual to automated)
+
+And More!!  
+- POP design framework build w/ dry cucumber (*recommended*)
