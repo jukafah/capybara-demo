@@ -40,7 +40,7 @@ git version 2.3.3
 ### Install RVM
 
 ```
-curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --ruby
+$ curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --ruby
 ```
 *RVM installation may take a few minutes.* 
 
