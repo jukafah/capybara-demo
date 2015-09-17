@@ -1,0 +1,1 @@
+web: PLATFORM=web -r features/support -r features/web -r features/step_definitions -r features/web/pages
