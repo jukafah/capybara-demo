@@ -5,9 +5,10 @@ Given(/^I am on the homepage "([^"]*)"$/) do |site|
 end
 
 
-When(/^I search for "([^"]*)"$/) do |searchTerm|
+When(/^I enter text "([^"]*)" and click "([^"]*)"$/) do |searchTerm, clickBtn|
 
   fill_in('lst-ib', :with => searchTerm)
+  click_button(clickBtn)
 
 end
 
@@ -28,3 +29,8 @@ Then(/^I am brought to website "([^"]*)"$/) do |exp_url|
 end
 
 
+Then(/^I see text "([^"]*)"$/) do |expText|
+
+  assert_text(expText)
+
+end
