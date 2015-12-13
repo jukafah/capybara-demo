@@ -10,31 +10,16 @@ Feature: Demo feature
     Then I am brought to website "http://jnicklas.github.io/capybara/"
 
 
-  @C002
-  Scenario: Google search for Calabash returns correct homepage in results
-
-    Given I am on the homepage "http://www.google.com"
-    When I enter text "Calabash" and click "Search"
-    And click on the "Calabash" link
-    Then I am brought to website "http://calaba.sh/"
-
-
   @C003
   Scenario: Capybara homepage has correct headline
 
     Given I am on the homepage "http://www.google.com"
     When I enter text "Capybara" and click "Search"
     And click on the "Capybara" link
-    Then I see text "Test your app with Capybara"
-
-
-  @C004
-  Scenario: Calabash homepage has correct headline
-
-    Given I am on the homepage "http://www.google.com"
-    When I enter text "Calabash" and click "Search"
-    And click on the "Calabash" link
-    Then I see text "Calabash Automated acceptance testing for mobile apps"
+    Then I see text
+    """
+    Test your app with Capybara
+    """
 
 
   @C005
@@ -50,8 +35,11 @@ Feature: Demo feature
   Scenario: tapqa homepage - verify headline 'We test software.'
 
     Given I am on the homepage "http://www.tapqa.com/"
-    Then I see text "We test software."
-    Then I see text "What quality concerns keep you up at night?"
+    Then I see text
+    """
+    We test software.
+    What quality concerns keep you up at night?
+    """
 
 
   @C007
@@ -59,19 +47,22 @@ Feature: Demo feature
 
     Given I am on the homepage "http://www.tapqa.com/"
     And click on the "Solutions" link
-    Then I see text "tap|STRATEGY"
-    Then I see text "tap|TECHNOLOGY"
-    Then I see text "tap|CONSULTING"
-    Then I see text "tap|LAKESHORE"
+    Then I see text
+    """
+    tap|STRATEGY
+    tap|TECHNOLOGY
+    tap|CONSULTING
+    tap|LAKESHORE
+    """
 
   @C008
   Scenario: tapqa solutions - verify tap|STRATEGY
 
     Given I am on the homepage "http://www.tapqa.com/"
     And click on the "Strategy for Scaling Development & Quality" link
-    Then I see text "tap|STRATEGY"
     Then I see text
     """
+    tap|STRATEGY
     Helping our clients with understanding how their current business processes
     integrate with their IT processes, technology & organization structure.
     """
@@ -81,9 +72,9 @@ Feature: Demo feature
 
     Given I am on the homepage "http://www.tapqa.com/"
     And click on the "Continuous Integration, Performance & Automation" link
-    Then I see text "tap|TECHNOLOGY"
     Then I see text
     """
+    tap|TECHNOLOGY
     We use technology to provide meaningful metrics & transparency into your software development.
     """
 
@@ -92,9 +83,9 @@ Feature: Demo feature
 
     Given I am on the homepage "http://www.tapqa.com/"
     And click on the "Ensuring Quality in Software Development" link
-    Then I see text "tap|CONSULTING"
     Then I see text
     """
+    tap|CONSULTING
     We provide consultants with QA, BA and QC/Testing skills to augment our clients’ project teams or resource pool.
     """
 
@@ -103,9 +94,9 @@ Feature: Demo feature
 
     Given I am on the homepage "http://www.tapqa.com/"
     And click on the "I Need a Nearshore Solution" link
-    Then I see text "tap|LAKESHORE"
     Then I see text
     """
+    tap|LAKESHORE
     Your nearshore solution, even nearer than you thought. Coming to you from the land of 10,000 lakes,
     we have the drive and the know-how to get your job done right the first time.
     """
