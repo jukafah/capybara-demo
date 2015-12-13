@@ -10,7 +10,7 @@ Feature: Demo feature
     Then I am brought to website "http://jnicklas.github.io/capybara/"
 
 
-  @C003
+  @C002
   Scenario: Capybara homepage has correct headline
 
     Given I am on the homepage "http://www.google.com"
@@ -22,7 +22,7 @@ Feature: Demo feature
     """
 
 
-  @C005
+  @C003
   Scenario: Google search for tapqa - click on homepage link
 
     Given I am on the homepage "http://www.google.com"
@@ -31,7 +31,7 @@ Feature: Demo feature
     Then I am brought to website "http://www.tapqa.com/"
 
 
-  @C006
+  @C004
   Scenario: tapqa homepage - verify headline 'We test software.'
 
     Given I am on the homepage "http://www.tapqa.com/"
@@ -42,7 +42,7 @@ Feature: Demo feature
     """
 
 
-  @C007
+  @C005
   Scenario: tapqa solutions - verify solutions
 
     Given I am on the homepage "http://www.tapqa.com/"
@@ -55,7 +55,8 @@ Feature: Demo feature
     tap|LAKESHORE
     """
 
-  @C008
+
+  @C006
   Scenario: tapqa solutions - verify tap|STRATEGY
 
     Given I am on the homepage "http://www.tapqa.com/"
@@ -67,7 +68,8 @@ Feature: Demo feature
     integrate with their IT processes, technology & organization structure.
     """
 
-  @C009
+
+  @C007
   Scenario: tapqa solutions - verify tap|TECHNOLOGY
 
     Given I am on the homepage "http://www.tapqa.com/"
@@ -78,7 +80,8 @@ Feature: Demo feature
     We use technology to provide meaningful metrics & transparency into your software development.
     """
 
-  @C010
+
+  @C008
   Scenario: tapqa solutions - verify tap|CONSULTING
 
     Given I am on the homepage "http://www.tapqa.com/"
@@ -89,7 +92,7 @@ Feature: Demo feature
     We provide consultants with QA, BA and QC/Testing skills to augment our clients’ project teams or resource pool.
     """
 
-  @C011
+  @C009
   Scenario: tapqa solutions - verify tap|LAKESHORE
 
     Given I am on the homepage "http://www.tapqa.com/"
@@ -101,7 +104,7 @@ Feature: Demo feature
     we have the drive and the know-how to get your job done right the first time.
     """
 
-  @C012
+  @C010
   Scenario: tapqa leadership - verify leaders
 
     Given I am on the homepage "http://tapqa.com/"
@@ -115,7 +118,7 @@ Feature: Demo feature
     Kirk Walton / Recruiting Director
     """
 
-  @C013
+  @C011
   Scenario: tapqa contact - contact us
 
     Given I am on the homepage "http://tapqa.com/"
