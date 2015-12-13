@@ -28,13 +28,6 @@ Then(/^I am brought to website "([^"]*)"$/) do |exp_url|
 end
 
 
-Then(/^I see text "([^"]*)"$/) do |expText|
-
-  assert_text(expText)
-
-end
-
-
 Then(/^I see text$/) do |text|
 
   assert_text(text)
@@ -57,7 +50,6 @@ end
 
 And(/^fill out the form$/) do |table|
   # table is a table.hashes.keys # => [:key, :value]
-
   table.hashes.each do |item|
     fill_in(item[:key], :with => item[:value])
   end
