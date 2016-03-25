@@ -146,10 +146,47 @@ C:\Users\you>: gem install capybara cucumber selenium-webdriver
 *note: This may take a few minutes*
 
 
+#### Setup - Debian-based Linux
+
+Good news: you already have git!
+
+Optional step: update to latest release.
+
+- `$ apt-get update`
+- `$ apt-get upgrade`
+
+### Install RVM
+
+```
+$ curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --ruby
+```
+
+### Install Ruby 2.1.5
+
+```
+$ rvm install 2.1.5
+```
+*note: installation may take some time*
+
+After installation, execute command to use Ruby 2.1.5 as default in all Terminal instances:
+
+```
+$ rvm use 2.1.5 --default
+$ ruby -v
+ruby 2.1.5p273 (2014-11-13 revision 48405) [x86_64-darwin14.0]
+```
+
+### Install gems
+
+```
+$ gem install cucumber capybara selenium-webdriver
+```
+*note: installation may take some time*
+
+
 ### @todo:
 
 More!  
-- linux setup
 - API tutorial
 - gherkin tutorial
 - skeleton framework build w/ non dry cucumber
