@@ -27,7 +27,7 @@ Feature: Demo feature
 
     Given I am on the homepage "http://www.google.com"
     When I enter text "tapqa" and click "Search"
-    And click on the "tap|QA: Software Quality Assurance Testing Company in MN" link
+    And click on the "tap|QA - Software Testing, Continuous Integration, Selenium" link
     Then I am brought to website "http://www.tapqa.com/"
 
 
@@ -50,7 +50,7 @@ Feature: Demo feature
     Then I see text
     """
     tap|STRATEGY
-    tap|TECHNOLOGY
+    tap|AUTOMATION
     tap|CONSULTING
     tap|LAKESHORE
     """
@@ -70,7 +70,7 @@ Feature: Demo feature
 
 
   @C007
-  Scenario: tapqa solutions - verify tap|TECHNOLOGY
+  Scenario: tapqa solutions - verify tap|AUTOMATION
 
     Given I am on the homepage "http://www.tapqa.com/"
     And click on the "Continuous Integration, Performance & Automation" link
@@ -89,7 +89,7 @@ Feature: Demo feature
     Then I see text
     """
     tap|CONSULTING
-    We provide consultants with QA, BA and QC/Testing skills to augment our clients’ project teams or resource pool.
+    Our tap|CONSULTING services are perfect for when you are facing a growing number of projects, rapid company growth, or adoption of new methodologies.
     """
 
   @C009
