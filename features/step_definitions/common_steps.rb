@@ -1,29 +1,28 @@
 Given(/^I am on the homepage "([^"]*)"$/) do |site|
 
-  visit(site)
+  @page = Demo.new
+  @page.go_to(site)
 
 end
 
 
-When(/^I enter text "([^"]*)" and click "([^"]*)"$/) do |searchTerm, clickBtn|
+When(/^I enter text "([^"]*)" and click "([^"]*)"$/) do |search_term, click_btn|
 
-  fill_in('lst-ib', :with => searchTerm)
-  click_button(clickBtn)
+  @page.enter_text_in_and_click(search_term, click_btn)
 
 end
 
 
 And(/^click on the "([^"]*)" link$/) do |link|
 
-  find_link(link).click
+  @page.click_on_link(link)
 
 end
 
 
 Then(/^I am brought to website "([^"]*)"$/) do |exp_url|
 
-  act_url = current_url
-  fail("Expected URL: #{exp_url}\nActual URL: #{act_url}") if (exp_url != act_url)
+  @page.check_url(exp_url)
 
 end
 
@@ -37,14 +36,8 @@ end
 
 Then(/^I see the following leaders$/) do |leader|
 
-  leaders = leader.split("\n")
-  leadership = all('.leadership')
+  @page.check_leaders(leader)
 
-  leadership.each_with_index do |item, index|
-    act_leader = item.find('h2').text
-    exp_leader = leaders[index]
-    fail("Expected leader: #{exp_leader}\nActual leader: #{act_leader}") if (exp_leader != act_leader)
-  end
 end
 
 
@@ -56,3 +49,41 @@ And(/^fill out the form$/) do |table|
 
 end
 
+
+Then(/^the following "([^"]*)" links are present$/) do |link_group, links|
+  # table is a table.hashes.keys # => [:link, :href]
+  @page.check_links(link_group, links)
+
+end
+
+Then(/^I am on the "([^"]*)" page$/) do |exp_page|
+
+  @page.check_page(exp_page)
+
+end
+
+Given(/^I go to the homepage$/) do
+  pending
+end
+
+And(/^I see the service menu link in the header$/) do
+  pending
+end
+
+When(/^I click the service menu link in the header$/) do
+  pending
+end
+
+Then(/^I see the following elements in the services flyout$/) do |table|
+  # table is a table.hashes.keys # => [:element]
+  pending
+end
+
+Then(/^I see the following elements in the "([^"]*)"$/) do |arg, table|
+  # table is a table.hashes.keys # => [:element]
+  pending
+end
+
+And(/^click on "([^"]*)"$/) do |element|
+  @page.click_on(element)
+end
