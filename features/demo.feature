@@ -5,27 +5,20 @@ Feature: Demo
   @C001 @smokeTest @regression
   Scenario: Google Search - Appium
     Given I am on "http://www.google.com"
-    When I search for "appium"
-    And select "Appium" in the search results
-    Then I am presented with the "dirp" homepage
+    When I search for "Cucumber"
+    And select "Cucumber" in the search results
+    Then I am presented with the "https://cucumber.io/" homepage
 
   @C002 @regression
-  Scenario: Google Search - cucumber-js
+  Scenario: Google Search - Capybara
     Given I am on "http://www.google.com"
-    When I search for "cucumber-js"
-    And select "cucumber-js" in the search results
-    Then I am presented with the "https://github.com/cucumber/cucumber-js" homepage
+    When I search for "Capybara"
+    And select "GitHub - teamcapybara/capybara" in the search results
+    Then I am presented with the "https://github.com/teamcapybara/capybara" homepage
 
   @C003 @smokeTest @regression
-  Scenario: Google Search - WebdriverIO
+  Scenario: Google Search - RubyMine
     Given I am on "http://www.google.com"
-    When I search for "WebdriverIO"
-    And select "WebdriverIO" in the search results
-    Then I am presented with the "http://webdriver.io/" homepage
-
-  @C004 @regression
-  Scenario: Google Search - WebStorm
-    Given I am on "http://www.google.com"
-    When I search for "WebStorm"
-    And select "WebStorm" in the search results
-    Then I am presented with the "https://www.jetbrains.com/webstorm/" homepage
+    When I search for "RubyMine"
+    And select "JetBrains RubyMine" in the search results
+    Then I am presented with the "https://www.jetbrains.com/ruby/" homepage

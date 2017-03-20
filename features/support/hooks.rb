@@ -9,8 +9,6 @@ After do |scenario|
   # TODO: take screenshots
   end
 
-  # page.driver.browser.mana
-
 end
 
 AfterStep do |scenario|

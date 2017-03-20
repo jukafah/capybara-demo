@@ -1,7 +1,7 @@
-When(/^I search for "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+When(/^I search for "([^"]*)"$/) do |search_text|
+  self.google_page.perform_search(search_text)
 end
 
-When(/^select "([^"]*)" in the search results$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+When(/^select "([^"]*)" in the search results$/) do |expected_link|
+  self.google_page.select_result(expected_link)
 end
