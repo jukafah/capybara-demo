@@ -1,36 +1,36 @@
-# capybara-demo
+# cucumber-capybara
 
 
 **Resources**
-- RubyDoc: http://www.rubydoc.info/github/jnicklas/capybara
-- Google Group: https://groups.google.com/forum/#!forum/ruby-capybara
+- [GitHub](https://github.com/teamcapybara/capybara)
+- [API](http://www.rubydoc.info/github/teamcapybara/capybara/master/Capybara)
+- [Google Group](https://groups.google.com/forum/#!forum/ruby-capybara)
 
-#### Setup - Mac
+#### Setup - OS X
 
-### Install Homebrew
+#### Install Homebrew
 
-Still in Terminal, execute the following commands:
+In terminal,
 ```
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-After installation:
+Then,
 
 ```
 $ brew doctor
 Your system is ready to brew
 ```
-**Note: You may get soft warnings on installation. The warning should be descriptive enough on whether or not action needs to be taken.**
 
 ### Install Git
 
-Still in terminal, execute:
+Execute
 
 ```
 $ brew install git
 ```
 
-After installation, execute:
+Then:
 
 ```
 $ git --version
@@ -42,7 +42,6 @@ git version 2.3.3
 ```
 $ curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --ruby
 ```
-*RVM installation may take a few minutes.* 
 
 Once done, quit, relaunch Terminal, and then execute:
 
@@ -51,66 +50,30 @@ $ rvm -v
 rvm 1.26.10 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
 $ ruby -v
 ruby 2.1.5p273 (2014-11-13 revision 48405) [x86_64-darwin14.0]
-$ brew doctor
-If no issues have occurred during setup, the message "Your system is ready to brew" is displayed. 
 ```
-*note: your version of ruby will change with the next few steps.
+
  
-### Install Ruby 2.1.5
+### Install Ruby 2.3.0
 
 ```
-$ rvm install 2.1.5
+$ rvm install 2.3.0
 ```
-*note: installation may take some time*
 
-After installation, execute command to use Ruby 2.1.5 as default in all Terminal instances:
+After installation, execute command to use Ruby 2.3.0 as default in all Terminal instances:
 
 ```
-$ rvm use 2.1.5 --default
+$ rvm use 2.3.0 --default
 $ ruby -v
-ruby 2.1.5p273 (2014-11-13 revision 48405) [x86_64-darwin14.0]
+ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-darwin15]
 ```
 
-### Install Capybara
+### Install gems
 
 ```
-$ gem install capybara
-```
-*note: this may take a few minutes*
-
-Check version (*you will have many other gems*):
-
-```
-$ gem list
-capybara (2.4.4)
+$ bundle install
 ```
 
-### Install Cucumber
+Execute example tests
 ```
-$ gem install cucumber
+$ cucumber -p web
 ```
-*note: This may take a few minutes*
-
-Check version: 
-```
-$ cucumber --version
-1.3.20
-```
-
-Install a driver:
-```
-$ gem install selenium-webdriver
-```
-
-### @todo:
-
-More!  
-- windows setup
-- API tutorial
-- gherkin tutorial
-- skeleton framework build w/ non dry cucumber
-- basic end to end tests (manual to automated)
-
-And More!!  
-- POP design framework build w/ dry cucumber (*recommended*)
-- upload examples
