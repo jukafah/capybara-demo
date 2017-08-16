@@ -6,9 +6,9 @@
 - [API](http://www.rubydoc.info/github/teamcapybara/capybara/master/Capybara)
 - [Google Group](https://groups.google.com/forum/#!forum/ruby-capybara)
 
-#### Setup - Mac
+#### Setup - OS X
 
-### Install Homebrew
+#### Install Homebrew
 
 In terminal,
 ```
@@ -53,10 +53,10 @@ ruby 2.1.5p273 (2014-11-13 revision 48405) [x86_64-darwin14.0]
 ```
 
  
-### Install Ruby 2.1.5
+### Install Ruby 2.3.0
 
 ```
-$ rvm install 2.1.5
+$ rvm install 2.3.0
 ```
 
 After installation, execute command to use Ruby 2.3.0 as default in all Terminal instances:
@@ -67,20 +67,10 @@ $ ruby -v
 ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-darwin15]
 ```
 
-### Install Capybara
+### Install gems
 
 ```
-$ gem install capybara
-```
-
-### Install Cucumber
-```
-$ gem install cucumber
-```
-
-Install a driver:
-```
-$ gem install selenium-webdriver
+$ bundle install
 ```
 
 Execute example tests
